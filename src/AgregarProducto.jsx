@@ -6,17 +6,52 @@ const AgregarProducto = () => {
   const [precioProducto, setPrecioProducto] = useState(0);
   const [categoria, setCategoria] = useState("");
   const [error, setError] = useState(false);
-
+  // Traer variable de entorno
+  const URL = process.env.REACT_APP_API_URL;
+  
   const leerCategoria = (e) =>{
     setCategoria(e.target.value)
   }
 
-  const handleSubmit = (e) =>{
+  const handleSubmit = async (e) =>{
         e.preventDefault()
     //validaciones
     if(nombreProducto.trim() !== '' && precioProducto !== '' && categoria !== ''){
     // si esta bien envio datos del producto a la API
       setError(false);
+    // crear objeto
+    const producto = {
+      // nombreProducto : nombreProducto,
+      // precioProducto : precioProducto,
+      // categoria : categoria
+      nombreProducto,
+      precioProducto,
+      categoria
+    }
+
+    // enviar el request POST 
+      try{
+        // estructura de datos a usar
+          const cabecera = {
+            method: "POST",
+            headers:{
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(producto)
+          };
+          const response = await fetch(URL, cabecera)
+          console.log(response)
+
+          if(response.status === 201){
+            alert('datos enviados')
+            // Mostart una ventama de sweet alert
+          }
+
+      }catch(error){
+        // mostrar un cartel de error al usuario
+
+      }
+
     }else{
     // si fallo muestro cartel de error
       setError(true);
@@ -69,7 +104,7 @@ const AgregarProducto = () => {
             onChange={leerCategoria}
           ></Form.Check>
         </div>
-        <Button variant='success' type='submit' className="w-100">Guardar</Button>
+        <Button variant='outline-warning' type='submit' className="w-100">Guardar</Button>
         {
           (error === true)?(
             <Alert variant='danger' className="my-5">Faltan cargar datos obligatorios</Alert>

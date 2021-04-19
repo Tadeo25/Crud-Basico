@@ -1,22 +1,52 @@
 {
-    "cafeteria":[
+  "cafeteria": [
     {
-        "nombreProducto":"cafe con leche",
-        "precioProducto": 100,
-        "categorias": "bebida-caliente",
-        "id":1
+      "nombreProducto": "cafe con leche",
+      "precioProducto": 100,
+      "categorias": "bebida-caliente",
+      "id": 1
     },
     {
-        "nombreProducto":"submarino",
-        "precioProducto": 150,
-        "categorias": "bebida-caliente",
-        "id":2
+      "nombreProducto": "submarino",
+      "precioProducto": 150,
+      "categorias": "bebida-caliente",
+      "id": 2
     },
     {
-        "nombreProducto":"medialunas",
-        "precioProducto": 20,
-        "categorias": "dulce",
-        "id":3
+      "nombreProducto": "medialunas",
+      "precioProducto": 20,
+      "categorias": "dulce",
+      "id": 3
+    },
+    {
+      "nombreProducto": "tostado jyq",
+      "precioProducto": "150",
+      "categoria": "salado",
+      "id": 4
+    },
+    {
+      "nombreProducto": "Licuado de Frutas",
+      "precioProducto": "180",
+      "categoria": "bebida-fria",
+      "id": 5
+    },
+    {
+      "nombreProducto": "Cerveza",
+      "precioProducto": "240",
+      "categoria": "bebida-fria",
+      "id": 6
+    },
+    {
+      "nombreProducto": "Té",
+      "precioProducto": "40",
+      "categoria": "bebida-caliente",
+      "id": 7
+    },
+    {
+      "nombreProducto": "Tortilla x Unidad",
+      "precioProducto": "10",
+      "categoria": "salado",
+      "id": 8
     }
-]
+  ]
 }

@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom';
 export default function Navegacion(props) {
   return (
     <>
-    <Navbar bg="secondary" expand="lg" variant="dark">
+    <Navbar bg="warning" expand="lg" variant="dark">
             <Navbar.Brand href="#home">
                     <img
                         alt=""
